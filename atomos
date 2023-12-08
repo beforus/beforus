@@ -1,21 +1,19 @@
 <script>
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const m = urlParams.get('m');
+const d = urlParams.get('d');
 const e = urlParams.get('e');
 let job;
 
 function factory() {
   if (typeof(job) == "undefined") {
-    job = new Worker("d.js");
+    job = new Worker("d.js?e=d");
   }
    job.onmessage = function(event) {
       switch (e) {
-        case 'ionna':  
-          const pass = document.createElement("p");
-          pass.textContent = `To Fat and Hair`;
+        case 'i':  
           stopWorker();
-          divInfo.appendChild(pass);
+          return window.location.replace("/beforus/?done=")+`Great I took it. I wrapped it around another plant to be.`;
           break;
         default:
           job = undefined;
