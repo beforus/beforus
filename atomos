@@ -1,1 +1,36 @@
-m
+<script>
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const m = urlParams.get('m');
+const e = urlParams.get('e');
+let job;
+
+function factory() {
+  if (typeof(job) == "undefined") {
+    job = new Worker("d.js");
+  }
+   job.onmessage = function(event) {
+      switch (e) {
+        case 'ionna':  
+          const pass = document.createElement("p");
+          pass.textContent = `To Fat and Hair`;
+          stopWorker();
+          divInfo.appendChild(pass);
+          break;
+        default:
+          job = undefined;
+          const pass = document.createElement("p");
+          pass.textContent = `Ahh, I see you didn't ask for anything.`;
+          divInfo.appendChild(pass);
+          break;
+    }
+  };
+}
+function stopWorker() {
+  job.terminate();
+  job = undefined;
+}
+window.onload = () => {
+  factory();
+};
+</script>
