@@ -55,21 +55,19 @@ body {
   .star
   .star
   .star
- <script type="text/javascript">
-        function dew(parameters) {
-              setTimeout(1000)
-          const urlParams = new URLSearchParams(parameters);
-
-          if(!urlParams.has('o')) {
-              return window.location.href(-1);
-          } else {
-              const year = urlParams.get('o');
-              const year = urlParams.get('x');
-              setTimeout(1000)
-              return window.location.replace("/sagittarius/dashboard.htm?");
+        <script type="text/javascript">
+        function dew() {
+          const urlParams = new URLSearchParams(window.location.search);  
+          if(urlParams.has('year'))const password = urlParams.get('year');
+              if(password=='1979'||password=='2007'){
+                console.log(password);//@̘100
+                let distance = new date();
+                let time = distance.now(); //@̘100 
+         window.location.replace("/sagittarius/dashboard.htm?"+time)
+        return false;
           }
-         
-        window.onload = dew(window.location.search);
+        }
+        window.onload = dew();
         </script>
     </body>
 </html>
