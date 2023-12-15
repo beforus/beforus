@@ -2,29 +2,27 @@
 <html lang="en">
 <head>
     <title>Hold on while we process your request...</title>
-<script>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script type="text/javascript">
+        function sacrafice() {
+          const urlParams = new URLSearchParams(queryString);
+
+          if(urlParams.has('password'))const password = urlParams.get('password');
+          if(urlParams.has('day'))const distance = urlParams.get('day');
+
+              if(password=='december'){
+
+                console.log(distance);//@̘100
+                let distance = new date();
+                let time = distance.now(); //@̘100
+
+        return(window.location.replace("/sagittarius/a/index.htm?"+time));
+          }
+        }
+        window.onload = sacrafice;
+        </script>
+    </head>
+    <body>
     
-if(!doGet(window.location.search.substr(1))) alert('False');
-function doGet(e){
-
-const
-  keys = urlParams.keys(),
-  values = urlParams.values(),
-  entries = urlParams.entries();
-
-for (const key of keys){
-    for (const value of values) {
-        var what = key; 
-        var is = value;
-            if (what="B") alert(value);
-    }
-}
-
-return false;   
-}
-</script>
-</head>
-<body onload="">
-   
-</body>
+    </body>
 </html>
