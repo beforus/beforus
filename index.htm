@@ -58,13 +58,11 @@ body {
         <script type="text/javascript">
         function dew() {
           const urlParams = new URLSearchParams(window.location.search);  
-          if(urlParams.has('year'))const password = urlParams.get('year');
-              if(password=='1979'||password=='2007'){
-                console.log(password);//@̘100
-                let distance = new date();
-                let time = distance.now(); //@̘100 
-         window.location.replace("/sagittarius/dashboard.htm?"+time)
-        return false;
+          if(urlParams.has('@')){
+              const __100 = urlParams.get('@');
+              if(__100){
+              window.location.replace("/sagittarius/dashboard.htm?")
+              }
           }
         }
         window.onload = dew();
