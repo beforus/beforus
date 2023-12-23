@@ -8,15 +8,17 @@ html {
     height: 100%;
 }
 body {
-    background: -webkit-gradient(linear, left top, left bottom, from(#000), to(#666)) fixed;
+    background: -webkit-gradient(linear, left top, left bottom, from(#000), to(#333)) fixed;
     height: 100%;
     margin: 0;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: fixed;'
+    align-items: center;
 }
 .stars {
   display: flex;
   transform-style: preserve-3d;
+  justify-content: center;
   animation: rotate 15000ms linear infinite;
 }
 .star {
@@ -25,7 +27,7 @@ body {
   background: linear-gradient(-30deg, rgba(100, 100, 100, 0) 0%, rgba(125, 125, 125, 0.2) 50%, rgba(150, 150, 150, 0.3) 50.5%, rgba(100, 100, 100, 0) 100%);
   background-size: 100px * 3 100%;
   background-position: 0 0;
-  clip-path: polygon(100 / 2 0, 100 / 5 100, 100 100 / 2.5, 0 100 / 2.5, 100 / 1.2 100);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
   animation: rotate 5000ms linear infinite;
 }
 
